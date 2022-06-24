@@ -77,3 +77,20 @@ Installation steps for Linux users:
 4.after waiting for completion -> sh LINQ.sh
 5.exit
 6.Done
+
+- python pip
+
+Windows:
+
+requests
+six
+pyodbc
+numpy
+
+Linux
+
+requests
+six
+pyodbc
+numpy
+cython
