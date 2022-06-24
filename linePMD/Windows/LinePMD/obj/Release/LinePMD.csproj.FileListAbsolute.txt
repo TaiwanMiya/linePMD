@@ -1,0 +1,11 @@
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\bin\Release\LinePMD.exe.config
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\bin\Release\LinePMD.exe
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\bin\Release\LinePMD.pdb
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\obj\Release\LinePMD.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\obj\Release\LinePMD.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\obj\Release\LinePMD.MainForm.resources
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\obj\Release\LinePMD.Properties.Resources.resources
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\obj\Release\LinePMD.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\obj\Release\LinePMD.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\obj\Release\LinePMD.exe
+C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\obj\Release\LinePMD.pdb

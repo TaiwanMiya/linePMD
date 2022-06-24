@@ -1,0 +1,11 @@
+C:\Users\yup89\source\repos\Installer\Installer\bin\Debug\Installer.exe.config
+C:\Users\yup89\source\repos\Installer\Installer\bin\Debug\Installer.exe
+C:\Users\yup89\source\repos\Installer\Installer\bin\Debug\Installer.pdb
+C:\Users\yup89\source\repos\Installer\Installer\obj\Debug\Installer.csproj.AssemblyReference.cache
+C:\Users\yup89\source\repos\Installer\Installer\obj\Debug\Installer.csproj.SuggestedBindingRedirects.cache
+C:\Users\yup89\source\repos\Installer\Installer\obj\Debug\Installer.MainForm.resources
+C:\Users\yup89\source\repos\Installer\Installer\obj\Debug\Installer.Properties.Resources.resources
+C:\Users\yup89\source\repos\Installer\Installer\obj\Debug\Installer.csproj.GenerateResource.cache
+C:\Users\yup89\source\repos\Installer\Installer\obj\Debug\Installer.csproj.CoreCompileInputs.cache
+C:\Users\yup89\source\repos\Installer\Installer\obj\Debug\Installer.exe
+C:\Users\yup89\source\repos\Installer\Installer\obj\Debug\Installer.pdb

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71DE9D52-275A-4F99-8ABA-BCBB80EE080F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LinePMD</RootNamespace>
+    <AssemblyName>LinePMD</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logos.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Acts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Acts.Designer.cs">
+      <DependentUpon>Acts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Chats.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Chats.Designer.cs">
+      <DependentUpon>Chats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Contacts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Friends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Friends.Designer.cs">
+      <DependentUpon>Friends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Msgs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Msgs.Designer.cs">
+      <DependentUpon>Msgs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Outs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Outs.Designer.cs">
+      <DependentUpon>Outs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Sends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Sends.Designer.cs">
+      <DependentUpon>Sends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Speed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Speed.Designer.cs">
+      <DependentUpon>Speed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Threadings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Threadings.Designer.cs">
+      <DependentUpon>Threadings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Urls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Urls.Designer.cs">
+      <DependentUpon>Urls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PMD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PMD.Designer.cs">
+      <DependentUpon>PMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Material.cs" />
+    <Compile Include="Module\ReadWrite.cs" />
+    <Compile Include="Module\Regexs.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\Acts.resx">
+      <DependentUpon>Acts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Chats.resx">
+      <DependentUpon>Chats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Friends.resx">
+      <DependentUpon>Friends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Msgs.resx">
+      <DependentUpon>Msgs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Outs.resx">
+      <DependentUpon>Outs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Sends.resx">
+      <DependentUpon>Sends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Speed.resx">
+      <DependentUpon>Speed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Threadings.resx">
+      <DependentUpon>Threadings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Urls.resx">
+      <DependentUpon>Urls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PMD.resx">
+      <DependentUpon>PMD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logos.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
