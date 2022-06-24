@@ -116,7 +116,11 @@ class Cclasses(object):
                 if ts != None:
                     for params in ts:
                         try:
-                            DealWith(self.main,self.svo,self.owner,self.admin,self.backdoor,params,servo=self.servo).DealWith()
+                            deals = DealWith(self.main,self.svo,self.owner,self.admin,self.backdoor,params,servo=self.servo)
+                            deals.DealWith()
+                            if deals.result!= None and deals.result[0] == 'permission':
+                                (self.admin,self.owner,self.backdoor) =\
+                                    (deals.result[1],deals.result[2],deals.result[3])
                             self.repl.SettingsRevision(params.revision)
                         except ValueError:assert ValueError(),"Invaild Value ><"
                         except RuntimeError:assert RuntimeError(),"Invaild Runtime ><"
@@ -158,6 +162,7 @@ class DealWith(object):
         self.backdoor = backdoor
         self.op = op
         self.args = None
+        self.result = None
         self.servo = servo
 
     def DealWith(self):
@@ -458,8 +463,8 @@ class DealWith(object):
                         elif ADMIX == 0x2:
                             Admin(admix).Command
                         if admix.result != None:
-                            self.admin = admix.result
-                            return Transfer.Reboot(self.admin,self.owner,self.backdoor)
+                            Transfer.Reboot(self.admin,self.owner,self.backdoor)
+                            self.result = ('permission',admix.result,self.owner,self.backdoor)
 
                     if case(0x0002):
                         CMD.append(self.be)
