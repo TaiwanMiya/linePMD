@@ -113,5 +113,4 @@ C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csproj.GenerateRe
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csproj.CoreCompileInputs.cache
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.exe
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.pdb
-C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csproj.AssemblyReference.cache
-C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csproj.SuggestedBindingRedirects.cache
+C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csprojAssemblyReference.cache

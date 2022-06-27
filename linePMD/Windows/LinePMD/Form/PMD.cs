@@ -525,6 +525,19 @@ namespace LinePMD
                     }
                 }
             }
+            string[] InsertDictFinally = new string[]
+            {
+                names[NewGroupCount],
+                gids[NewGroupCount]
+            };
+            Material.GroupsInfo.Add(NewGroupCount, InsertDictFinally);
+            Material.GroupMembersNameInfo.Add(NewGroupCount, displayNames.ToArray());
+            Material.GroupMembersInfo.Add(NewGroupCount, mids.ToArray());
+            Groups.Items.Add(Material.GroupsInfo[NewGroupCount][0]);
+            NewGroupCount++;
+            CheakGroupCount = 0;
+            displayNames.Clear();
+            mids.Clear();
         }
 
         #endregion
