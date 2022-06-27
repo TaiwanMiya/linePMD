@@ -38,6 +38,11 @@ Do_Initial_Installation(){
     $s_a $i unixodbc-dev -y
     $s_a $i screen -y
     $s_a $i automake bison flex g++ git libboost-all-dev libevent-dev libssl-dev libtool make pkg-config -y
+    $PIP numpy
+    $PIP requests
+    $PIP pyodbc
+    $PIP cython
+    $PIP six
 }
 
 Do_Printf_Logo(){
@@ -51,7 +56,8 @@ Do_Printf_Logo(){
 SuccessfulInstallation(){
     echo "${yellow}>< Installation is complete ^^"
     echo "${yellow}Please install LINQ.sh"
-    echo "${yellow}Also use the command"
+    echo "${yellow}The following command must be used ^^"
+    echo "${yellow}必須使用以下命令 ^^"
     echo "${yellow}>>>sh LINQ.sh"
     echo "${default}"
 }
@@ -68,7 +74,8 @@ echo 'export PATH=\"$PATH:/opt/mssql-tools/bin\"' >> ~/.bashrc
 source ~/.bashrc
 sudo apt-get install -y unixodbc-dev
 rm -f LINQ.sh &
-echo \"\033[92m Please enter exit to exit by yourself ^^ \e[0m\"" > $LINQ
+echo \"\033[92m Please enter exit to exit by yourself ^^ \e[0m\"
+echo \"\033[92m 请输入exit来结束root ^^ \e[0m\"" > $LINQ
     sudo su
 }
 
