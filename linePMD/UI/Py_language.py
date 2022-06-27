@@ -129,7 +129,6 @@ class Pyclasses(object):
                             print(self.ERROR)
                         finally:...
             except Exception:assert Exception(),'Please turn it off asap ^^~'
-            finally:continue
 
     def __eq__(self, __o: object) -> bool:
         return isinstance(__o, self.__class__) and self.__dict__ == __o.__dict__
