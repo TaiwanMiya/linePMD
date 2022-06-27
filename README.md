@@ -96,7 +96,7 @@
   - account = your mail
   -password = your password
   - token = your token
-  -cert = your crt certificate
+  - cert = your crt certificate
   
   - If there is information in the field that you don't have or don't know, you can type None
   - However, the mid and title cannot be marked with None, otherwise an error will occur
