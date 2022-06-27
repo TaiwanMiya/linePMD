@@ -97,7 +97,6 @@ C:\Users\Administrator\Desktop\linePMD\Installer\LinePMD\obj\Debug\LinePMD.Contr
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\bin\Debug\LinePMD.exe.config
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\bin\Debug\LinePMD.exe
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\bin\Debug\LinePMD.pdb
-C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csprojAssemblyReference.cache
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.Controls.Acts.resources
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.Controls.Chats.resources
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.Controls.Contacts.resources
@@ -114,3 +113,5 @@ C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csproj.GenerateRe
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csproj.CoreCompileInputs.cache
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.exe
 C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.pdb
+C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csproj.AssemblyReference.cache
+C:\Users\Han\Desktop\linePMD\Windows\LinePMD\obj\Debug\LinePMD.csproj.SuggestedBindingRedirects.cache

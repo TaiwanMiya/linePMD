@@ -611,18 +611,31 @@ namespace LinePMD
         {
             if (MessageBox.Show("要開始執行必備安裝程序?", "安裝", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                bool CheakPythonInstallIsSuccess = false;
                 if (MessageBox.Show("需要安裝python嗎?\nVersion:3.8.10",
                     "python安裝", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string PyInstall = $"cd {Material.thispath}\\loading\npython-3.8.10-amd64.exe";
                     DosExecute(PyInstall);
-                    MessageBox.Show("等待安裝完成後\n請按下ok\n否則安裝會失敗!",
-                        "安裝確認",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    CheakPythonInstallIsSuccess = true;
                 }
-                string package = "pip install requests numpy cloudscraper pyodbc six\n";
-                DosExecute(package);
-                MessageBox.Show("python包安裝完畢\n將進行驅動程序安裝", "驅動安裝", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                while (CheakPythonInstallIsSuccess)
+                {
+                    if (MessageBox.Show("是否已安裝完畢Python?","安裝確認",
+                        MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CheakPythonInstallIsSuccess = false;
+                    }
+                };
+                MessageBox.Show("將進行驅動程序安裝", "驅動安裝", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 DosExecute($"cd {Material.thispath}\\loading\nmsodbcsql.msi");
+                MessageBox.Show("將進行Python包安裝", "python庫安裝");
+                string package = "pip install requests\n" +
+                    "pip install numpy\n" +
+                    "pip install cloudscraper\n" +
+                    "pip install pyodbc\n" +
+                    "pip install six\n";
+                DosExecute(package);
             }
         }
 
