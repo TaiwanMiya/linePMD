@@ -40,13 +40,13 @@
   
   - [0]
   - mid = uf7fcf8c0cbc6f6d6da05cda76ceebeb0
-  - mail = 123456@gmail.com
+  - account = 123456@gmail.com
   - password = 123456789
   - token = None
   - cert = None
   - [1]
   - mid = u19875ca08f0aefae06c2571e8f49f477
-  - mail = None
+  - account = None
   - password = None
   - token = FeQXvJJTjx6q66CSqSha.u/p+ze6ITUqUksDkKJTx/G.lhPSKZVYO+s4mOFLQyJ3kfP/qyEyQxI/snpeJ6bbJsg=
   - cert = fb5ca6a157a19b25f43db35142bab37f805b0469ad9058ff45ee3c5b3509c123
@@ -94,7 +94,7 @@
   - [0]
   - mid = your mid
   - account = your mail
-  -password = your password
+  - password = your password
   - token = your token
   - cert = your crt certificate
   
@@ -105,13 +105,13 @@
   
   - [0]
   - mid = uf7fcf8c0cbc6f6d6da05cda76ceebeb0
-  - mail = 123456@gmail.com
+  - account = 123456@gmail.com
   - password = 123456789
   - token = None
   - cert = None
   - [1]
   - mid = u19875ca08f0aefae06c2571e8f49f477
-  - mail = None
+  - account = None
   - password = None
   - token = FeQXvJJTjx6q66CSqSha.u/p+ze6ITUqUksDkKJTx/G.lhPSKZVYO+s4mOFLQyJ3kfP/qyEyQxI/snpeJ6bbJsg=
   - cert = fb5ca6a157a19b25f43db35142bab37f805b0469ad9058ff45ee3c5b3509c123
