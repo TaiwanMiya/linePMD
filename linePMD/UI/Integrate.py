@@ -911,8 +911,10 @@ class GroupAct(object):
         if len(TASKS) >= len(groups) * len(array):
             for gid in range(len(groups)):
                 for i in range(len(array)):
-                    pool.append(ThreadingPMD(TASKS[counter].CancelInvitation,args=(groups[gid],array[i])))
+                    pool.append(ThreadingPMD(TASKS[counter].CancelInvitation,args=(groups[gid],[array[i]])))
                     counter += 1
             [i.start() for i in pool]
+            [i.join() for i in pool]
+            [print(i.getResult()) for i in pool]
         else:
-            [self.index.sv.CancelInvitation(gid,array[i]) for i in array for gid in groups]
+            [self.index.sv.CancelInvitation(gid,[array[i]]) for i in range(len(array)) for gid in groups]
