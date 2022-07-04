@@ -210,6 +210,7 @@ namespace LinePMD
         /// <param name="results">字節列表</param>
         private void CheakInstruction(List<string> results)
         {
+            if (results.Count < 1) return;
             if (results[0].Trim() == "login")
             {
                 Material.IsLogin = true;
