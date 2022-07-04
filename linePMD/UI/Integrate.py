@@ -111,20 +111,20 @@ class HelpConfig(object):
             "%s %#x decimal"
         ]
         menu = [
-            ">>>Py profile\n",
-            ">>>Py message\n",
-            ">>>Py messages\n",
-            ">>>Py threads\n",
-            ">>>C profile\n",
-            ">>>C message\n",
-            ">>>C messages\n",
-            ">>>C threads\n"
+            ">>>Py profile",
+            ">>>Py message",
+            ">>>Py messages",
+            ">>>Py threads",
+            ">>>C profile",
+            ">>>C message",
+            ">>>C messages",
+            ">>>C threads"
         ]
         for i in range(len(instruction)):
             instruction[i] = instruction[i] % (foo,0x01 << i//0x02) if i % 0x02 != 0 else instruction[i] % foo
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<SPEED>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<SPEED>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
     @property
     def Send(self):
@@ -136,14 +136,14 @@ class HelpConfig(object):
             "%s %#x decimal string"
         ]
         menu = [
-            ">>>Message range\n",
-            ">>>Thread range\n"
+            ">>>Message range",
+            ">>>Thread range"
         ]
         for i in range(len(instruction)):
             instruction[i] = instruction[i] % (foo,0x01 << i//0x02) if i % 0x02 != 0 else instruction[i] % foo
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<SEND>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<SEND>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
     @property
     def Thread(self):
@@ -155,14 +155,14 @@ class HelpConfig(object):
             "%s %#x"
         ]
         menu = [
-            ">>>Thread append\n",
-            ">>>Inquire thread\n"
+            ">>>Thread append",
+            ">>>Inquire thread"
         ]
         for i in range(len(instruction)):
             instruction[i] = instruction[i] % (foo,0x01 << i//0x02) if i % 0x02 != 0 else instruction[i] % foo
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<THREAD>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<THREAD>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
     @property
     def Contact(self):
@@ -180,18 +180,18 @@ class HelpConfig(object):
             "%s %#x"
         ]
         menu = [
-            ">>>Send mid list\n",
-            ">>>Send contact\n",
-            ">>>Send profile\n",
-            ">>>Mymid\n"
+            ">>>Send mid list",
+            ">>>Send contact",
+            ">>>Send profile",
+            ">>>Mymid"
         ]
         for i in range(len(instruction)):
             if i == skip[0]:instruction[skip[0]] = instruction[skip[0]] % foo
             elif i == skip[1]:instruction[skip[1]] = instruction[skip[1]] % (foo,0x01 << i//0x02)
             else:instruction[i] = instruction[i] % (foo,0x01 << i//0x02,display) if i % 0x02 != 0 else instruction[i] % (foo,display)
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<CONTACT>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<CONTACT>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
     @property
     def Admin(self):
@@ -206,15 +206,15 @@ class HelpConfig(object):
             "%s %#x"
         ]
         menu = [
-            ">>>Add administrator\n",
-            ">>>Del administrator\n",
-            ">>>View administrator\n"
+            ">>>Add administrator",
+            ">>>Del administrator",
+            ">>>View administrator"
         ]
         for i in range(len(instruction)):
             instruction[i] = instruction[i] % (foo,0x01 << i//0x02) if i % 0x02 != 0 else instruction[i] % foo
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<CONTACT>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<CONTACT>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
     @property
     def Group(self):
@@ -228,15 +228,15 @@ class HelpConfig(object):
             "%s %#x (gids or re)"
         ]
         menu = [
-            ">>>Get current chat ID\n",
-            ">>>View all your own groups\n",
-            ">>>View specified group\n"
+            ">>>Get current chat ID",
+            ">>>View all your own groups",
+            ">>>View specified group"
         ]
         for i in range(len(instruction)):
             instruction[i] = instruction[i] % (foo,0x01 << i//0x02) if i % 0x02 != 0 else instruction[i] % foo
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<GROUP>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<GROUP>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
     @property
     def Friend(self):
@@ -249,14 +249,14 @@ class HelpConfig(object):
             "%s %#x"
         ]
         menu = [
-            ">>>Add friends\n",
-            ">>>View your friends\n"
+            ">>>Add friends",
+            ">>>View your friends"
         ]
         for i in range(len(instruction)):
             instruction[i] = instruction[i] % (foo,0x01 << i//0x02) if i % 0x02 != 0 else instruction[i] % foo
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<FRIEND>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<FRIEND>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
     @property
     def Message(self):
@@ -266,13 +266,13 @@ class HelpConfig(object):
             "%s %#x (decimal)"
         ]
         menu = [
-            ">>>Retract message\n"
+            ">>>Retract message"
         ]
         for i in range(len(instruction)):
             instruction[i] = instruction[i] % (foo,0x01 << i//0x02) if i % 0x02 != 0 else instruction[i] % foo
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<MESSAGE>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<MESSAGE>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
     @property
     def GroupUrl(self):
@@ -290,16 +290,16 @@ class HelpConfig(object):
             "%s %#x {}".format(all_can)
         ]
         menu = [
-            ">>>Find Group by url\n",
-            ">>>Joined Group by url\n",
-            ">>>Group url on\n",
-            ">>>Group url off\n"
+            ">>>Find Group by url",
+            ">>>Joined Group by url",
+            ">>>Group url on",
+            ">>>Group url off"
         ]
         for i in range(len(instruction)):
             instruction[i] = instruction[i] % (foo,0x01 << i//0x02) if i % 0x02 != 0 else instruction[i] % foo
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<GROUP URL>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<GROUP URL>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
     @property
     def GroupAct(self):
@@ -314,15 +314,15 @@ class HelpConfig(object):
             "%s %#x {}".format(all_can)
             ]
         menu = [
-            ">>>Kicked to group\n",
-            ">>>Invite to group\n",
-            ">>>Cancel to Invitation\n"
+            ">>>Kicked to group",
+            ">>>Invite to group",
+            ">>>Cancel to Invitation"
         ]
         for i in range(len(instruction)):
             instruction[i] = instruction[i] % (foo,0x01 << i//0x02) if i % 0x02 != 0 else instruction[i] % foo
         for i in range(0x02,len(instruction) + len(menu),0x03):
-            instruction.insert(i,menu[i // 0x03])
-        return '<GROUP ACT>'+''.join(i for i in ['\n'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
+            instruction.insert(i,menu[i // 0x03] + '\x0a')
+        return '<GROUP ACT>'+''.join(i for i in ['\x0a'] * 2)+'\n'.join([i for i in instruction]) + '\n' + Transfer.TimeNow()
 
 class Speed(object):
 
@@ -862,10 +862,12 @@ class GroupAct(object):
             groups.extend(self.index.args[1])
         [array.remove(i) if i in array else ... for i in self.index.args[2]]
         pool : list = []
+        counter = 0
         if len(TASKS) >= len(groups) * len(array):
             for gid in range(len(groups)):
                 for i in range(len(array)):
-                    pool.append(ThreadingPMD(TASKS[gid*i].Kickout,args=(groups[gid],[array[i]])))
+                    pool.append(ThreadingPMD(TASKS[counter].Kickout,args=(groups[gid],[array[i]])))
+                    counter += 1
             [i.start() for i in pool]
         else:
             [self.index.sv.Kickout(gid,[i]) for i in array for gid in groups]
@@ -905,10 +907,12 @@ class GroupAct(object):
             groups.extend(self.index.args[1])
         [array.remove(i) if i in array else ... for i in self.index.args[2]]
         pool : list = []
+        counter = 0
         if len(TASKS) >= len(groups) * len(array):
             for gid in range(len(groups)):
                 for i in range(len(array)):
-                    pool.append(ThreadingPMD(TASKS[gid*i].CancelInvitation,args=(groups[gid],array[i])))
+                    pool.append(ThreadingPMD(TASKS[counter].CancelInvitation,args=(groups[gid],array[i])))
+                    counter += 1
             [i.start() for i in pool]
         else:
-            [self.index.sv.CancelInvitation(gid,[i]) for i in array for gid in groups]
+            [self.index.sv.CancelInvitation(gid,array[i]) for i in array for gid in groups]
